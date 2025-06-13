@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Skip from "../Skip/Skip";
 import localImages from "../../assets/localImages.json";
+import "./skipHolder.css";
 
-const SkipHolder = () => {
+const Main = () => {
   const [skips, setSkips] = useState([]);
+  const [selectedId, setSelectedId] = useState(null);
+  const [selectedSkip, setSelectedSkip] = useState(null);
 
   useEffect(() => {
     const fetchSkips = async () => {
@@ -32,26 +35,47 @@ const SkipHolder = () => {
   }, []);
 
 
-
   return (
-    <dev>
+    <main className="main-content">
       <h1>Choose Your Skip Size</h1>
-      <p>Select the skip size that best suits your needs</p>
+      <p id="mainP">Select the skip size that best suits your needs</p>
+      <hr />
+
       {skips.length === 0 ? (
         <p>Loading skips...</p>
       ) : (
-        <div>
-          {skips.map((skip) => (
-            <Skip
-              key={skip.id}
-              skip={skip}
-            />
-          ))}
-        </div>
+        <>
+          <div className="skip-grid four-cols">
+            {skips.slice(0, 4).map((skip) => (
+              <Skip
+                key={skip.id}
+                skip={skip}
+              />
+            ))}
+          </div>
+
+          <div className="skip-grid three-cols">
+            {skips.slice(4, 7).map((skip) => (
+              <Skip
+                key={skip.id}
+                skip={skip}
+              />
+            ))}
+          </div>
+
+          <div className="skip-grid two-cols">
+            {skips.slice(7, 9).map((skip) => (
+              <Skip
+                key={skip.id}
+                skip={skip}
+              />
+            ))}
+          </div>
+        </>
       )}
 
-    </dev>
+    </main>
   );
 };
 
-export default SkipHolder;
+export default Main;
