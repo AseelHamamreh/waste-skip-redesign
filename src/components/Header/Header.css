@@ -1,0 +1,195 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 48px;  /* bigger square logo */
+    height: 48px;
+    object-fit: contain;
+  }
+  
+  /* Steps container */
+  .steps {
+    display: flex;
+    gap: 24px;
+    flex-wrap: nowrap;
+  }
+  
+  /* Common step styles */
+  .step {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    user-select: none;
+  }
+  
+  /* Done step styles */
+  .step.done {
+    color: #16a34a; /* green-600 */
+  }
+  
+  .step.done.clickable:hover {
+    color: #15803d; /* darker green on hover */
+    cursor: pointer;
+  }
+  
+  /* Current step styles */
+  .step.current {
+    color: #22c55e; /* green-500 bright */
+    font-weight: 600;
+    animation: pulse 1.5s infinite;
+    cursor: default;
+  }
+  
+  /* Pending step styles */
+  .step.pending {
+    color: #9ca3af; /* gray-400 */
+  }
+  
+  .step.pending.not-clickable:hover {
+    cursor: not-allowed;
+    /* no color change */
+  }
+  
+  /* Check icon */
+  .check-icon {
+    color: #16a34a;
+  }
+  
+  /* Pulse animation */
+  @keyframes pulse {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+
+
+  @media (max-width: 768px) {
+  .header-container {
+    padding: 10px 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .logo-section {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .steps {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .step {
+    font-size: 12px;
+    gap: 4px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    /* Optional: make steps wrap nicely */
+    flex: 1 1 auto;
+    min-width: 90px;
+    justify-content: center;
+  }
+
+  /* Optional: reduce pulse animation on small devices */
+  .step.current {
+    animation-duration: 2s;
+  }
+}
+
+
+/* Hide default menu icon on desktop */
+.menu-icon {
+    display: none;
+  }
+  
+  /* For mobile screens */
+  @media (max-width: 768px) {
+    .header-container {
+      justify-content: flex-start;
+      gap: 12px;
+    }
+  
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .steps {
+      position: fixed;
+      top: 60px; /* below the header */
+      left: 0;
+      background: white;
+      height: calc(100vh - 60px);
+      width: 250px;
+      flex-direction: column;
+      padding: 20px;
+      box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+      overflow-y: auto;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      z-index: 1100;
+    }
+  
+    .steps.open {
+      transform: translateX(0);
+    }
+  
+    .steps.closed {
+      transform: translateX(-100%);
+    }
+  
+    .steps .step {
+      margin-bottom: 16px;
+      font-size: 16px;
+      gap: 8px;
+    }
+  
+    /* Show the hamburger menu icon */
+    .menu-icon {
+      display: block;
+    }
+  }
+  
