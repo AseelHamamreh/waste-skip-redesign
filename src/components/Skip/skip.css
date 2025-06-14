@@ -97,7 +97,9 @@ body {
   transition: background-color 0.9s ease, box-shadow 0.3s ease;
 }
 
-
+.select-btn:hover{
+  cursor: pointer;
+}
 
 
 .glass-info {
