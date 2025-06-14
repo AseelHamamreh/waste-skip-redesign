@@ -36,7 +36,6 @@ const Main = () => {
     fetchSkips();
   }, []);
 
-
   const handleSelect = (id) => {
     const skip = skips.find((s) => s.id === id);
     setSelectedId(id);
@@ -103,8 +102,6 @@ const Main = () => {
           onContinue={handleContinue}
         />
       )}
-
-      
     </main>
   );
 };

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./header.css"
+import "./header.css";
 import {
   MapPin,
   Trash2,
@@ -37,7 +37,11 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header-container">
-        <div className="logo-section" onClick={toggleMenu} style={{cursor: 'pointer'}}>
+        <div
+          className="logo-section"
+          onClick={toggleMenu}
+          style={{ cursor: "pointer" }}
+        >
           <img
             src="https://wewasteltd.co.uk/wp-content/uploads/2024/07/Untitled-design-4.png"
             alt="Logo"

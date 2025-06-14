@@ -1,12 +1,101 @@
-# React + Vite
+♻️ Skip Booking Page — Redesign Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a complete redesign of a skip booking page, built with React and Vite. The goal was to modernize the user interface, maintain core functionality, and deliver a responsive, smooth user experience across both mobile and desktop devices.
 
-Currently, two official plugins are available:
+✅ Objectives
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    🔁 Redesign the UI to look completely different from the original.
 
-## Expanding the ESLint configuration
+    💡 Maintain all existing functionality and user flow.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+    💻 Create a responsive layout for mobile and desktop.
+
+    🧼 Use clean, modular, and reusable React code.
+
+    📦 Fetch skip data dynamically from an external API.
+
+🧰 Tech Stack
+
+    React (with Vite)
+
+    CSS (custom styling, mobile-first responsive layout)
+
+    JavaScript ES6+
+
+    Icons: Lucide Icons
+
+    API Integration with fetch
+
+📁 File Structure Overview
+
+src/
+├── App.jsx # Main entry with header + content
+├── assets/
+│ └── localImages.json # Local image mapping by skip ID
+├── components/
+│ ├── Header/ # Step progress navigation
+│ ├── Modal/ # Reusable modal component
+│ ├── Skip/ # Single skip item card
+│ └── SkipHolder/ # Fetches skips, handles layout & modal
+└── main.jsx # Vite main entry
+
+🔗 API Integration
+
+Skip data is fetched from this live API endpoint:
+
+https://app.wewantwaste.co.uk/api/skips/by-location?postcode=NR32&area=Lowestoft
+
+For each skip, local image data is matched using localImages.json for better visuals.
+
+🧩 Component Structure & Code Organization
+
+        Header — Displays the multi-step progress bar with icons and highlights the current step.
+
+        SkipHolder — Acts as the container for skip data fetching, state management, and layout.
+
+        Skip — Represents individual skip cards, showing key details and handling selection.
+
+        Modal — Provides a detailed popup when a skip is selected, allowing users to continue or go back.
+
+🖼️ Features
+
+    Responsive multi-column layout (4, 3, 2 skips per row)
+
+    Modern glassmorphism-style skip cards
+
+    Smooth modal transitions
+
+    Dynamic rendering with real API data
+
+    Clear, intuitive UI for skip selection
+
+    Fully modular & reusable components
+
+🧪 How to Run Locally
+
+git clone https://github.com/AseelHamamreh/waste-skip-redesign.git
+cd waste-skip-redesign
+npm install
+npm run dev
+
+Open your browser at: http://localhost:5173/waste-skip-redesign/
+
+
+
+📱 Responsiveness
+
+Built with mobile-first design principles. Works across:
+
+    ✅ Mobile phones
+
+    ✅ Tablets
+
+    ✅ Desktop browsers
+
+    
+
+Demo & Code
+
+    Live Demo: https://aseelhamamreh.github.io/waste-skip-redesign/
+
+    GitHub Repo: https://github.com/AseelHamamreh/waste-skip-redesign

@@ -2,7 +2,14 @@ import React from "react";
 import "./skip.css";
 
 const Skip = ({ skip, onSelect }) => {
-  const { id, image, size, hire_period_days, price_before_vat, allowed_on_road } = skip;
+  const {
+    id,
+    image,
+    size,
+    hire_period_days,
+    price_before_vat,
+    allowed_on_road,
+  } = skip;
 
   const handleClick = () => {
     onSelect(id);
@@ -12,7 +19,9 @@ const Skip = ({ skip, onSelect }) => {
     <div className="glass-card" onClick={handleClick}>
       <div className="image-wrapper">
         <img src={image} alt={`Skip ${id}`} className="glass-image" />
-        <div className={`road-tag ${allowed_on_road ? "allowed" : "not-allowed"}`}>
+        <div
+          className={`road-tag ${allowed_on_road ? "allowed" : "not-allowed"}`}
+        >
           {allowed_on_road ? "Allowed On The Road" : "Not Allowed On The Road"}
         </div>
       </div>

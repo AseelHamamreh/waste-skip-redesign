@@ -1,92 +1,90 @@
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(8px);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-  }
-  
-  .header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo-section {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo {
-    width: 48px; 
-    height: 48px;
-    object-fit: contain;
-  }
-  
-  .steps {
-    display: flex;
-    gap: 24px;
-    flex-wrap: nowrap;
-  }
-  
-  .step {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 14px;
-    transition: color 0.3s ease;
-    user-select: none;
-  }
-  
-  .step.done {
-    color: #16a34a; 
-  }
-  
-  .step.done.clickable:hover {
-    color: #15803d; 
-    cursor: pointer;
-  }
-  
-  .step.current {
-    color: #22c55e; 
-    font-weight: 600;
-    animation: pulse 1.5s infinite;
-    cursor: default;
-  }
-  
-  .step.pending {
-    color: #9ca3af; 
-  }
-  
-  .step.pending.not-clickable:hover {
-    cursor: not-allowed;
-  }
-  
-  .check-icon {
-    color: #16a34a;
-  }
-  
-  @keyframes pulse {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.6;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
 
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  @media (max-width: 768px) {
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.steps {
+  display: flex;
+  gap: 24px;
+  flex-wrap: nowrap;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  transition: color 0.3s ease;
+  user-select: none;
+}
+
+.step.done {
+  color: #16a34a;
+}
+
+.step.done.clickable:hover {
+  color: #15803d;
+  cursor: pointer;
+}
+
+.step.current {
+  color: #22c55e;
+  font-weight: 600;
+  animation: pulse 1.5s infinite;
+  cursor: default;
+}
+
+.step.pending {
+  color: #9ca3af;
+}
+
+.step.pending.not-clickable:hover {
+  cursor: not-allowed;
+}
+
+.check-icon {
+  color: #16a34a;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
   .header-container {
     padding: 10px 15px;
     flex-wrap: wrap;
@@ -128,56 +126,54 @@
   }
 }
 
-
 .menu-icon {
-    display: none;
+  display: none;
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+  .header-container {
+    justify-content: flex-start;
+    gap: 12px;
   }
-  
-  /* For mobile screens */
-  @media (max-width: 768px) {
-    .header-container {
-      justify-content: flex-start;
-      gap: 12px;
-    }
-  
-    .logo-section {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-  
-    .steps {
-      position: fixed;
-      top: 60px; 
-      left: 0;
-      background: white;
-      height: calc(100vh - 60px);
-      width: 250px;
-      flex-direction: column;
-      padding: 20px;
-      box-shadow: 2px 0 8px rgba(0,0,0,0.1);
-      overflow-y: auto;
-      transform: translateX(-100%);
-      transition: transform 0.3s ease;
-      z-index: 1100;
-    }
-  
-    .steps.open {
-      transform: translateX(0);
-    }
-  
-    .steps.closed {
-      transform: translateX(-100%);
-    }
-  
-    .steps .step {
-      margin-bottom: 16px;
-      font-size: 16px;
-      gap: 8px;
-    }
-  
-    .menu-icon {
-      display: block;
-    }
+
+  .logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
-  
+
+  .steps {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    background: white;
+    height: calc(100vh - 60px);
+    width: 250px;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1100;
+  }
+
+  .steps.open {
+    transform: translateX(0);
+  }
+
+  .steps.closed {
+    transform: translateX(-100%);
+  }
+
+  .steps .step {
+    margin-bottom: 16px;
+    font-size: 16px;
+    gap: 8px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
