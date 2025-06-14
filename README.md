@@ -73,12 +73,16 @@ cd waste-skip-redesign
 npm install
 npm run dev
 
+```
+
 Then open your browser at:
 
 http://localhost:5173/waste-skip-redesign/
 
-🔗 Demo & Code
 
-    Live Demo: https://aseelhamamreh.github.io/waste-skip-redesign/
+## 🔗 Demo & Code
 
-    GitHub Repository: https://github.com/AseelHamamreh/waste-skip-redesign
+- **Live Demo:** [https://aseelhamamreh.github.io/waste-skip-redesign/](https://aseelhamamreh.github.io/waste-skip-redesign/)
+- **GitHub Repository:** [https://github.com/AseelHamamreh/waste-skip-redesign](https://github.com/AseelHamamreh/waste-skip-redesign)
+
+
