@@ -22,22 +22,6 @@ A complete redesign of a **skip booking page** built with **React** and **Vite**
 - Lucide Icons for UI icons
 - API integration using `fetch`
 
----
-
-## 📁 Project Structure Overview
-
-src/
-├── App.jsx # Main entry: header + content container
-├── assets/
-│ └── localImages.json # Local image mapping by skip ID
-├── components/
-│ ├── Header/ # Multi-step progress navigation component
-│ ├── Modal/ # Reusable modal popup component
-│ ├── Skip/ # Single skip card component
-│ └── SkipHolder/ # Fetches skips, manages state, layout & modal
-└── main.jsx # Vite main entry point
-
-
 
 ---
 
