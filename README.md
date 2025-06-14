@@ -49,7 +49,6 @@ Each skip’s data is matched with local images from `localImages.json` for enha
 
 - Responsive multi-column layout adapting to screen size (4, 3, or 2 skips per row).
 - Modern **glassmorphism** style skip cards.
-- Smooth modal transition animations.
 - Real-time data rendering using API.
 - Clear and intuitive UI for selecting skips.
 - Fully modular and reusable React components.
