@@ -24,19 +24,17 @@
   }
   
   .logo {
-    width: 48px;  /* bigger square logo */
+    width: 48px; 
     height: 48px;
     object-fit: contain;
   }
   
-  /* Steps container */
   .steps {
     display: flex;
     gap: 24px;
     flex-wrap: nowrap;
   }
   
-  /* Common step styles */
   .step {
     display: flex;
     align-items: center;
@@ -46,40 +44,34 @@
     user-select: none;
   }
   
-  /* Done step styles */
   .step.done {
-    color: #16a34a; /* green-600 */
+    color: #16a34a; 
   }
   
   .step.done.clickable:hover {
-    color: #15803d; /* darker green on hover */
+    color: #15803d; 
     cursor: pointer;
   }
   
-  /* Current step styles */
   .step.current {
-    color: #22c55e; /* green-500 bright */
+    color: #22c55e; 
     font-weight: 600;
     animation: pulse 1.5s infinite;
     cursor: default;
   }
   
-  /* Pending step styles */
   .step.pending {
-    color: #9ca3af; /* gray-400 */
+    color: #9ca3af; 
   }
   
   .step.pending.not-clickable:hover {
     cursor: not-allowed;
-    /* no color change */
   }
   
-  /* Check icon */
   .check-icon {
     color: #16a34a;
   }
   
-  /* Pulse animation */
   @keyframes pulse {
     0% {
       opacity: 1;
@@ -126,20 +118,17 @@
     gap: 4px;
     padding: 4px 8px;
     border-radius: 6px;
-    /* Optional: make steps wrap nicely */
     flex: 1 1 auto;
     min-width: 90px;
     justify-content: center;
   }
 
-  /* Optional: reduce pulse animation on small devices */
   .step.current {
     animation-duration: 2s;
   }
 }
 
 
-/* Hide default menu icon on desktop */
 .menu-icon {
     display: none;
   }
@@ -159,7 +148,7 @@
   
     .steps {
       position: fixed;
-      top: 60px; /* below the header */
+      top: 60px; 
       left: 0;
       background: white;
       height: calc(100vh - 60px);
@@ -187,7 +176,6 @@
       gap: 8px;
     }
   
-    /* Show the hamburger menu icon */
     .menu-icon {
       display: block;
     }

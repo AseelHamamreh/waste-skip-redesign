@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import Skip from "../Skip/Skip";
 import localImages from "../../assets/localImages.json";
 import "./skipHolder.css";
+import Modal from "../Modal/Modal";
 
 const Main = () => {
   const [skips, setSkips] = useState([]);
   const [selectedId, setSelectedId] = useState(null);
+  const [showModal, setShowModal] = useState(false);
   const [selectedSkip, setSelectedSkip] = useState(null);
 
   useEffect(() => {
@@ -35,6 +37,20 @@ const Main = () => {
   }, []);
 
 
+  const handleSelect = (id) => {
+    const skip = skips.find((s) => s.id === id);
+    setSelectedId(id);
+    setSelectedSkip(skip);
+    setShowModal(false);
+    setTimeout(() => setShowModal(true), 700);
+  };
+
+  const handleCloseModal = () => setShowModal(false);
+  const handleContinue = () => {
+    alert("Continue clicked");
+    setShowModal(false);
+  };
+
   return (
     <main className="main-content">
       <h1>Choose Your Skip Size</h1>
@@ -50,6 +66,8 @@ const Main = () => {
               <Skip
                 key={skip.id}
                 skip={skip}
+                isSelected={selectedId === skip.id}
+                onSelect={handleSelect}
               />
             ))}
           </div>
@@ -59,6 +77,8 @@ const Main = () => {
               <Skip
                 key={skip.id}
                 skip={skip}
+                isSelected={selectedId === skip.id}
+                onSelect={handleSelect}
               />
             ))}
           </div>
@@ -68,12 +88,23 @@ const Main = () => {
               <Skip
                 key={skip.id}
                 skip={skip}
+                isSelected={selectedId === skip.id}
+                onSelect={handleSelect}
               />
             ))}
           </div>
         </>
       )}
 
+      {showModal && selectedSkip && (
+        <Modal
+          skip={selectedSkip}
+          onClose={handleCloseModal}
+          onContinue={handleContinue}
+        />
+      )}
+
+      
     </main>
   );
 };
