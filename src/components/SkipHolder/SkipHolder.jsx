@@ -4,7 +4,7 @@ import localImages from "../../assets/localImages.json";
 import "./skipHolder.css";
 import Modal from "../Modal/Modal";
 
-const Main = () => {
+const SkipHolder = () => {
   const [skips, setSkips] = useState([]);
   const [selectedId, setSelectedId] = useState(null);
   const [showModal, setShowModal] = useState(false);
@@ -106,4 +106,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default SkipHolder;
