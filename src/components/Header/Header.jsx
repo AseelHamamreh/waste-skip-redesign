@@ -43,7 +43,7 @@ const Header = () => {
           style={{ cursor: "pointer" }}
         >
           <img
-            src="https://wewasteltd.co.uk/wp-content/uploads/2024/07/Untitled-design-4.png"
+            src="src/assets/images/logo.png"
             alt="Logo"
             className="logo"
           />

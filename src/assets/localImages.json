@@ -1,39 +1,39 @@
 [
     {
       "id": 17933,
-      "image": "https://yozbrydxdlcxghkphhtq.supabase.co/storage/v1/object/public/skips/skip-sizes/4-yarder-skip.jpg"
+      "image": "src/assets/images/4-yard-skip.jpg"
     },
     {
       "id": 17934,
-      "image": "https://yozbrydxdlcxghkphhtq.supabase.co/storage/v1/object/public/skips/skip-sizes/6-yarder-skip.jpg"
+      "image": "src/assets/images/6-yard-skip.jpg"
     },
     {
       "id": 17935,
-      "image": "https://yozbrydxdlcxghkphhtq.supabase.co/storage/v1/object/public/skips/skip-sizes/8-yarder-skip.jpg"
+      "image": "src/assets/images/10-yard-skip.jpg"
     },
     {
       "id": 17936,
-      "image": "https://yozbrydxdlcxghkphhtq.supabase.co/storage/v1/object/public/skips/skip-sizes/10-yarder-skip.jpg"
+      "image": "src/assets/images/12-yard-skip.jpg"
     },
     {
       "id": 17937,
-      "image": "https://yozbrydxdlcxghkphhtq.supabase.co/storage/v1/object/public/skips/skip-sizes/12-yarder-skip.jpg"
+      "image": "src/assets/images/14-yard-skip.jpg"
     },
     {
       "id": 17938,
-      "image": "https://yozbrydxdlcxghkphhtq.supabase.co/storage/v1/object/public/skips/skip-sizes/14-yarder-skip.jpg"
+      "image": "src/assets/images/16-yard-skip.jpg"
     },
     {
       "id": 17939,
-      "image": "https://yozbrydxdlcxghkphhtq.supabase.co/storage/v1/object/public/skips/skip-sizes/16-yarder-skip.jpg"
+      "image": "src/assets/images/4-yard-skip.jpg"
     },
     {
       "id": 15124,
-      "image": "https://yozbrydxdlcxghkphhtq.supabase.co/storage/v1/object/public/skips/skip-sizes/20-yarder-skip.jpg"
+      "image": "src/assets/images/20-yard-skip.jpg"
     },
     {
       "id": 15125,
-      "image": "https://yozbrydxdlcxghkphhtq.supabase.co/storage/v1/object/public/skips/skip-sizes/40-yarder-skip.jpg"
+      "image": "src/assets/images/40-yard-skip.jpg"
     }
   ]
   

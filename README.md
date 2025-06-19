@@ -32,7 +32,8 @@ Skip data is dynamically fetched from the live API endpoint:
 https://app.wewantwaste.co.uk/api/skips/by-location?postcode=NR32&area=Lowestoft
 
 
-Each skip’s data is matched with local images from `localImages.json` for enhanced visuals.
+
+##### 🖼️ Images are stored locally to ensure consistent display and avoid dependency on external sources.
 
 ---
 
